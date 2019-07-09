@@ -11,6 +11,11 @@ LOG_FILE="/var/www/webroot/post_deploy.log"
 EMAILS="alexey.lazarenko@jelastic.com"
 CHANNEL_ID="DBS19HYHK"
 SLACK_CS_TOKEN="xoxp-393406286165-400941316103-685855488512-a25cadc4dcfa50414575491db727423f"
+#"xoxp-
+# 393406286165-
+# 400941316103-
+# 691033460582-
+# c29d4af55af7f9df5c2b53d5e0402630"
 
 function getLatestVersion() {
     str=$(cat ${GIT_CS_PATH}/mkdocs.yml  | tail -1 | grep -Eo '(.*):');
