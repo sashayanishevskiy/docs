@@ -22,3 +22,6 @@ do
    cd "$i" && python setup.py develop;
 done
 
+
+yum install jq
+#jq > 1.5 is required
