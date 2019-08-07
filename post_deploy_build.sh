@@ -143,6 +143,8 @@ then
     sendErrorMailResponse
 else
     echo "OK";
+    [ ! -d "${WEBROOT}/backup" ] && mkdir ${WEBROOT}/backup;
+    cp -r ${WEBROOT}/site/* ${WEBROOT}/backup/
     ln -sfn ${GIT_CS_PATH}/site/ ${WEBROOT}/site
     sendSuccessMailResponse
 fi
